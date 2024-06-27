@@ -5,5 +5,5 @@ data class Film(
     val filmNameText: String,
     val directorNameText: String,
     val producerNameText: String,
-    val releaseYearText: String
+    val releaseYearText: Int
 )

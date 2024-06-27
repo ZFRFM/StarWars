@@ -17,3 +17,17 @@ n
 -.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
 S
 #.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
+@
+build.gradle.kts,d\b\dbcff70658daf80b53ce624f6adcaa529df5ed8d
+I
+gradle/libs.versions.toml,d\7\d7595319a0658be6f1ed500ad590d42e4b28bc4f
+q
+Aapp/src/main/java/ru/faimizufarov/starwars/data/network/AppApi.kt,1\8\18ace0f2b74495622a7b96c409676445e0399599
+w
+Gapp/src/main/java/ru/faimizufarov/starwars/data/network/FilmResponse.kt,4\a\4aeae3cd7e44ecc80ed37ca666502910425304ab
+z
+Japp/src/main/java/ru/faimizufarov/starwars/data/network/AppApiInterface.kt,5\6\56428af338937013538c1bf437b648fa223b655f
+P
+ app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
+y
+Iapp/src/main/java/ru/faimizufarov/starwars/data/network/ResultResponse.kt,0\7\0797573795b415c627d9ffa0c036c68a02760d6a

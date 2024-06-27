@@ -12,7 +12,7 @@ class FilmsViewHolder(
             filmNameTextView.text = film.filmNameText
             directorNameTextView.text = film.directorNameText
             producerNameTextView.text = film.producerNameText
-            releaseYearTextView.text = film.releaseYearText
+            releaseYearTextView.text = film.releaseYearText.toString()
         }
     }
 }
