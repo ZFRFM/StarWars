@@ -1,3 +1,19 @@
 
 j
 :app/src/main/java/ru/faimizufarov/starwars/MainActivity.kt,f\3\f35706e719628306f716cb0c2a33b6977b86291a
+{
+Kapp/src/main/java/ru/faimizufarov/starwars/screens/adapter/FilmsFragment.kt,3\7\3712e841bda40979bb47e80b148594967cc3913b
+D
+app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
+s
+Capp/src/main/java/ru/faimizufarov/starwars/screens/FilmsFragment.kt,4\6\469a4210a47a0ae0202aabb93e19dbc549717179
+z
+Japp/src/main/java/ru/faimizufarov/starwars/screens/adapter/FilmsAdapter.kt,1\0\10013a9045cb806a7381dc46671d2326668b888d
+}
+Mapp/src/main/java/ru/faimizufarov/starwars/screens/adapter/FilmsViewHolder.kt,8\7\8744eb322b360aa5f62470ce680ee03bd5986627
+n
+>app/src/main/java/ru/faimizufarov/starwars/data/models/Film.kt,0\0\00ddd228ceb32fb358f5cd1753ed189d4de5e161
+]
+-.idea/sonarlint/securityhotspotstore/index.pb,8\8\88a9255124c95bdc913197c120a8d560edc59c8e
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0
