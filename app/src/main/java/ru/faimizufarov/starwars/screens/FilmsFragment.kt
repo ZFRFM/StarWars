@@ -6,17 +6,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.lifecycleScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
-import ru.faimizufarov.starwars.data.network.AppApi
-import ru.faimizufarov.starwars.data.network.toFilm
+import ru.faimizufarov.starwars.data.repositories.FilmRepository
 import ru.faimizufarov.starwars.databinding.FragmentFilmsBinding
 import ru.faimizufarov.starwars.screens.adapter.FilmsAdapter
 
 class FilmsFragment : Fragment() {
     private lateinit var binding: FragmentFilmsBinding
     private val filmsAdapter = FilmsAdapter()
+
+    private val filmRepository: FilmRepository by lazy {
+        FilmRepository()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,10 +31,8 @@ class FilmsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.filmRecyclerView.adapter = filmsAdapter
         lifecycleScope.launch {
-            val films = AppApi.retrofitService.getFilms().results.map { it.toFilm() }
-            withContext(Dispatchers.Main) {
-                filmsAdapter.submitList(films)
-            }
+            val films = filmRepository.getFilms()
+            filmsAdapter.submitList(films)
         }
     }
 

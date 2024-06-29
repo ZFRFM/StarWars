@@ -1,8 +1,6 @@
 
 j
 :app/src/main/java/ru/faimizufarov/starwars/MainActivity.kt,f\3\f35706e719628306f716cb0c2a33b6977b86291a
-{
-Kapp/src/main/java/ru/faimizufarov/starwars/screens/adapter/FilmsFragment.kt,3\7\3712e841bda40979bb47e80b148594967cc3913b
 D
 app/build.gradle.kts,d\2\d2a4383452aad84a18429a5844d31330a012a9e6
 s
@@ -31,3 +29,5 @@ P
  app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 y
 Iapp/src/main/java/ru/faimizufarov/starwars/data/network/ResultResponse.kt,0\7\0797573795b415c627d9ffa0c036c68a02760d6a
+~
+Napp/src/main/java/ru/faimizufarov/starwars/data/repositories/FilmRepository.kt,b\a\ba1dfa543b6393ae8c3962a9caf0684fef3c44e4
