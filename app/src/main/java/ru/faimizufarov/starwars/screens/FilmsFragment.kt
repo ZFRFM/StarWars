@@ -16,7 +16,7 @@ class FilmsFragment : Fragment() {
     private val filmsAdapter = FilmsAdapter()
 
     private val filmRepository: FilmRepository by lazy {
-        FilmRepository()
+        FilmRepository(requireContext())
     }
 
     override fun onCreateView(

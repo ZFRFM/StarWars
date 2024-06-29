@@ -23,6 +23,8 @@ fun FilmResponse.toFilm(): Film {
         filmNameText = filmName,
         directorNameText = directorName,
         producerNameText = producerName,
-        releaseYearText = date.year
+        releaseYearText = date.year,
+        characters = characters,
+        planets = planets
     )
 }

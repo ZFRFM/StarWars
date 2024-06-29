@@ -31,3 +31,11 @@ y
 Iapp/src/main/java/ru/faimizufarov/starwars/data/network/ResultResponse.kt,0\7\0797573795b415c627d9ffa0c036c68a02760d6a
 ~
 Napp/src/main/java/ru/faimizufarov/starwars/data/repositories/FilmRepository.kt,b\a\ba1dfa543b6393ae8c3962a9caf0684fef3c44e4
+v
+Fapp/src/main/java/ru/faimizufarov/starwars/data/database/FilmEntity.kt,a\c\acadea72fe94d5eebc2c990b196873cd8467fd9b
+s
+Capp/src/main/java/ru/faimizufarov/starwars/data/database/FilmDao.kt,5\1\519170fec12c3fc4a2faedeeb92c9d8cbad24edd
+w
+Gapp/src/main/java/ru/faimizufarov/starwars/data/database/AppDatabase.kt,6\a\6ade5db07229e28212aadddf343041e7f0f1d02f
+z
+Japp/src/main/java/ru/faimizufarov/starwars/data/database/ListConverters.kt,5\d\5db3b02ce78e717d6abde26a3d1c726a7ff388db
