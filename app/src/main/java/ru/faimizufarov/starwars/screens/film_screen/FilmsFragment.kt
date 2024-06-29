@@ -1,4 +1,4 @@
-package ru.faimizufarov.starwars.screens
+package ru.faimizufarov.starwars.screens.film_screen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
 import ru.faimizufarov.starwars.data.models.Film
 import ru.faimizufarov.starwars.data.repositories.FilmRepository
 import ru.faimizufarov.starwars.databinding.FragmentFilmsBinding
-import ru.faimizufarov.starwars.screens.adapter.FilmsAdapter
+import ru.faimizufarov.starwars.screens.film_screen.adapter.FilmsAdapter
 
 class FilmsFragment : Fragment() {
     private lateinit var binding: FragmentFilmsBinding
@@ -38,7 +38,9 @@ class FilmsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.contentSearch.filmRecyclerView.adapter = filmsAdapter
         lifecycleScope.launch {
-            val films = filmRepository.getFilms()
+            val films = filmRepository.getFilms().sortedBy {  film ->
+                film.id
+            }
             filmsAdapter.submitList(films)
             getQueryTextChange(films)
         }
@@ -52,7 +54,8 @@ class FilmsFragment : Fragment() {
                 if (query.isNotEmpty()) {
                     val filteredFilms = films.filter { film ->
                         film.filmNameText.contains(query, ignoreCase = true)
-                    }
+                    }.sortedBy { film -> film.id }
+
                     filmsAdapter.submitList(filteredFilms)
                 } else {
                     filmsAdapter.submitList(films)

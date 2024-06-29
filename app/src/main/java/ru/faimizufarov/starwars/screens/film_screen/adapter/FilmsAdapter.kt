@@ -1,4 +1,4 @@
-package ru.faimizufarov.starwars.screens.adapter
+package ru.faimizufarov.starwars.screens.film_screen.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
