@@ -6,4 +6,5 @@
     <string name="director_name">Director name</string>
     <string name="producer_name">Producer name</string>
     <string name="release_year">Release year</string>
+    <string name="write_film_name">Введите название фильма</string>
 </resources>

@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.StarWars" parent="Base.Theme.StarWars" />
+    <style name="Theme.StarWars.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.StarWars.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.SearchView" parent="">
+        <item name="android:editTextColor">#61000000</item>
+        <item name="android:textColorHint">#61000000</item>
+    </style>
+
 </resources>
