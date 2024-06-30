@@ -7,4 +7,5 @@
     <string name="producer_name">Producer name</string>
     <string name="release_year">Release year</string>
     <string name="write_film_name">Введите название фильма</string>
+    <string name="back">Назад</string>
 </resources>

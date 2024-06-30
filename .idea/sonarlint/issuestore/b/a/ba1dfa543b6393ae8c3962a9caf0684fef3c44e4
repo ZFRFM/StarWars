@@ -1,0 +1,3 @@
+
+akotlin:S6310"Avoid hardcoded dispatchers.(Ô¥‚ü8Ñ‘ü¢†2J$4b6d33ed-6423-437e-94ca-b41ebf1e35c0
+–kotlin:S6311"QRemove this dispatcher. It is pointless when used with only suspending functions.(Ô¥‚ü8Ò‘ü¢†2J$3470187b-fe5d-46d3-9226-feecddc9ac1a

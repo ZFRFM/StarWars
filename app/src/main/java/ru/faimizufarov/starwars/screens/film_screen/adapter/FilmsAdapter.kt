@@ -7,7 +7,9 @@ import androidx.recyclerview.widget.ListAdapter
 import ru.faimizufarov.starwars.data.models.Film
 import ru.faimizufarov.starwars.databinding.ItemFilmBinding
 
-class FilmsAdapter: ListAdapter<Film, FilmsViewHolder>(ItemCallback) {
+class FilmsAdapter(
+    private val onItemClick: (Film) -> Unit,
+): ListAdapter<Film, FilmsViewHolder>(ItemCallback) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmsViewHolder {
         val itemBinding =
             ItemFilmBinding.inflate(
@@ -16,7 +18,9 @@ class FilmsAdapter: ListAdapter<Film, FilmsViewHolder>(ItemCallback) {
                 false,
             )
 
-        return FilmsViewHolder(itemBinding)
+        return FilmsViewHolder(itemBinding) { index ->
+            onItemClick(currentList[index])
+        }
     }
 
     override fun onBindViewHolder(holder: FilmsViewHolder, position: Int) {

@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SearchView
+import androidx.core.os.bundleOf
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.channels.awaitClose
@@ -13,14 +14,17 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
+import androidx.fragment.app.setFragmentResult
+import ru.faimizufarov.starwars.R
 import ru.faimizufarov.starwars.data.models.Film
 import ru.faimizufarov.starwars.data.repositories.FilmRepository
 import ru.faimizufarov.starwars.databinding.FragmentFilmsBinding
+import ru.faimizufarov.starwars.screens.character_screen.CharactersFragment
 import ru.faimizufarov.starwars.screens.film_screen.adapter.FilmsAdapter
 
 class FilmsFragment : Fragment() {
     private lateinit var binding: FragmentFilmsBinding
-    private val filmsAdapter = FilmsAdapter()
+    private val filmsAdapter = FilmsAdapter(onItemClick = ::clickFilm)
 
     private val filmRepository: FilmRepository by lazy {
         FilmRepository(requireContext())
@@ -61,6 +65,23 @@ class FilmsFragment : Fragment() {
                     filmsAdapter.submitList(films)
                 }
             }
+    }
+
+    private fun clickFilm(film: Film) {
+        val bundle =
+            bundleOf(
+                CharactersFragment.FILM_NAME
+                        to film.filmNameText,
+                CharactersFragment.CHARACTER_URLS
+                        to film.characters,
+            )
+
+        setFragmentResult(CharactersFragment.FILM_POSITION_RESULT, bundle)
+
+        parentFragmentManager.beginTransaction().replace(
+            R.id.fragmentContainerView,
+            CharactersFragment.newInstance(),
+        ).commit()
     }
 
     companion object {

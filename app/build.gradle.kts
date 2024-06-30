@@ -60,6 +60,7 @@ dependencies {
     //region Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.fragment.ktx)
     annotationProcessor(libs.androidx.room.room.compiler3)
     ksp(libs.androidx.room.room.compiler3)
     //endregion
