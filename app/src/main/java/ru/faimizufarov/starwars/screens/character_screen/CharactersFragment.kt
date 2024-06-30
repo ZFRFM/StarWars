@@ -9,10 +9,12 @@ import android.widget.Toast
 import androidx.fragment.app.setFragmentResultListener
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
+import ru.faimizufarov.starwars.R
 import ru.faimizufarov.starwars.data.repositories.CharacterRepository
 import ru.faimizufarov.starwars.data.repositories.FilmRepository
 import ru.faimizufarov.starwars.databinding.FragmentCharactersBinding
 import ru.faimizufarov.starwars.screens.character_screen.adapter.CharactersAdapter
+import ru.faimizufarov.starwars.screens.film_screen.FilmsFragment
 
 class CharactersFragment : Fragment() {
     private lateinit var binding: FragmentCharactersBinding
@@ -36,12 +38,18 @@ class CharactersFragment : Fragment() {
 
         setFragmentResultListener(FILM_POSITION_RESULT) { _, bundle ->
             val filmName = bundle.getString(FILM_NAME)
-
             binding.filmNameStatusBar.text = filmName
 
             lifecycleScope.launch {
 
             }
+        }
+
+        binding.imageViewBack.setOnClickListener {
+            parentFragmentManager
+                .beginTransaction()
+                .replace(R.id.fragmentContainerView, FilmsFragment.newInstance())
+                .commit()
         }
     }
 
